@@ -65,30 +65,72 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .search-form__fieldset-title {
-  color: #FFF;
+  color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  margin-block-end: 5px;
 }
 
 .search-form__label {
   display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
   width: fit-content;
+  gap: 5px;
 }
 
 .search-form__textfield {
-  display: inline-flex;
   width: 225px;
   height: 27px;
+  color: rgb(255 255 255 / 0.7);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: none;
+  border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  border-inline-start: none;
+  border-inline-end: none;
+  appearance: none;
+}
+
+input[type='checkbox']:checked + .search-form__pseudo-checkbox {
+  background-color: #fff;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  height: 34px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.button {
+  display: flex;
+  border: 1px solid #fff;
+  cursor: pointer;
+  justify-content: center;
   align-items: center;
+  gap: 10px;
+  background: none;
 }
 
 .content__details {
@@ -100,7 +142,7 @@ ol {
 }
 
 .title {
-  color: #FFF;
+  color: #fff;
   font-family: Oswald;
   font-size: 75px;
   font-style: normal;
@@ -132,7 +174,7 @@ ol {
 }
 
 .content__card-link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -179,4 +221,16 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-} 
+}
+
+.more-button {
+  width: 100%;
+  min-height: 34px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
