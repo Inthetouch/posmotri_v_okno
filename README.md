@@ -1,1 +1,1 @@
-https://github.com/Inthetouch/posmotri_v_okno
+https://github.com/Inthetouch/posmotri_v_okno.git
