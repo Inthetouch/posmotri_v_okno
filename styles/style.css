@@ -122,14 +122,20 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
+  display: inline-block;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  display: block;
+  content: '';
   background-color: #fff;
-}
+  inline-size: 15px;
+  block-size: 15px;
+  margin: 1px
+} 
 
 .search-form__label-text:hover {
   text-decoration-line: underline;
@@ -151,7 +157,7 @@ ol {
   line-height: normal;
 }
 
-.button:default {
+.button {
   display: flex;
   border: 1px solid #fff;
   cursor: pointer;
@@ -159,10 +165,6 @@ ol {
   align-items: center;
   gap: 10px;
   background: none;
-}
-
-.button:focus {
-  outline: none;
 }
 
 .button:hover {
@@ -174,8 +176,9 @@ ol {
   text-decoration-line: none;
 }
 
-.button:has(:focus-visible) {
-  border: 1px double #FFF;
+.button:focus-visible {
+  outline: 1px double #fff;
+  outline-offset: -3px;
 }
 
 .content__details {
