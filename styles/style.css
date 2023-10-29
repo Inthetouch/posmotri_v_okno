@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -38,10 +41,6 @@ ol {
   list-style: none;
 }
 
-/* Не знал как оставить вам комментарий, хотел бы поблагодарить вас за подсказки. Спасибо.
-Постарался исправить все ваши замечания, единственное не знаю как исправить первое, 
-казалось бы патался центрировать содержимое по двум осям, спустить его ниже не получилось. */
-
 .content {
   display: flex;
   justify-content: center;
@@ -49,7 +48,6 @@ ol {
   align-items: flex-end;
   min-width: 1140px;
   gap: 30px;
-  padding: 270px 30px 0;
 }
 
 .result__video-container {
@@ -92,8 +90,12 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration-line: underline;
+}
+
+.search-form__label .search-form__label-text:hover {
+  text-decoration: none;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -142,7 +144,7 @@ ol {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
+  min-height: 34px;
 }
 
 .button {
@@ -168,7 +170,6 @@ ol {
 
 .button:active {
   background: #545050;
-  text-decoration-line: none;
 }
 
 .button:focus {
@@ -238,6 +239,10 @@ ol {
   background: #545050;
 }
 
+.content__card-link_current {
+  background: #1B1919;
+}
+
 .content__video-card {
   display: flex;
   flex-direction: row;
@@ -268,6 +273,9 @@ ol {
   font-style: normal;
   font-weight: 400;
   line-height: 0.9;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
