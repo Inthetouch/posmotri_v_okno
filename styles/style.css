@@ -94,10 +94,6 @@ ol {
   text-decoration-line: underline;
 }
 
-.search-form__label .search-form__label-text:hover {
-  text-decoration: none;
-}
-
 .search-form__label:has(:focus-visible) {
   padding: 1px;
   outline: 1px solid #FFF;
@@ -240,7 +236,7 @@ ol {
 }
 
 .content__card-link_current {
-  background: #1B1919;
+  background: #545050;
 }
 
 .content__video-card {
